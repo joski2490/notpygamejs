@@ -12,19 +12,19 @@ var food = [];
 var rad= 15; //radius of agents
 var eyesep= 0.6; //separate of eyes in radians
 var eyelen= 30; //how many pixels away from body eyes are
-var eyesens= 0.0005; //how sensitive is the eye? decrease for more sensitivity...
+var eyesens= 0.0000005; //how sensitive is the eye? decrease for more sensitivity...
 var eyemult= 0.5; //linear multiplier on strength of eye.
 var foodloss= 0.002; //food loss per iteration
 var repthr= 3; //what is the replication threshold? in amount of food
-var foodgain= 0.5; //how much food and replication is gained when agent eats?
-var mutrate= 0.1; //how common are mutations?
-var mutrate2= 0.3; //how severe are they when they do occur?
-var foodaddfreq= 10; //how often do we add food?
-var foodlimit= 30; //how much food can there be total?
+var foodgain= 0.8; //how much food and replication is gained when agent eats?
+var mutrate= 0.5; //how common are mutations?
+var mutrate2= 0.5; //how severe are they when they do occur?
+var foodaddfreq= 30; //how often do we add food?
+var foodlimit= 90; //how much food can there be total?
 var boostcost=0.001;  //how much does use of boost cost in health
 
-var brainsize= 20; //how many neurons does each brain have. Must be bigger than about 10
-var braindensity= 3; //how dense are the brains? (number of synapses per neuron)
+var brainsize= 50; //how many neurons does each brain have. Must be bigger than about 10
+var braindensity= 50; //how dense are the brains? (number of synapses per neuron)
 
 function Brain()
 {
@@ -104,7 +104,7 @@ function Agent(){
     this.s1= 0;  //food sense eye 1
     this.s2= 0;  //food sense eye 2
     this.brain= new Brain();
-    this.speed= 4.0;
+    this.speed= 1.0;
     this.boost= 0.0; //boost, on top of speed
     this.health= 1.0;
     this.rep= 0.0; //replication counter
